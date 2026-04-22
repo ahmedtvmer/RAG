@@ -1,11 +1,9 @@
 import streamlit as st
 import requests
 import time
+import os
 
-# API_URL = "http://api:8080/ask"
-
-# To this:
-API_URL = "http://localhost:8080/ask"
+API_URL = os.getenv("API_URL")
 
 
 st.set_page_config(page_title="Local Agentic RAG", page_icon="🧠")

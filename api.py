@@ -30,7 +30,7 @@ class AskRequest(BaseModel):
         ...,
         min_length=1,
         description="The user's natural-language question.",
-        json_schema_extra={"example": "What is retrieval-augmented generation?"},
+        json_schema_extra={"example": "Who developed ChatGPT?"},
     )
     chat_history: List[Dict[str, str]] = []
 

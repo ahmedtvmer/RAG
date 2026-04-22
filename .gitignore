@@ -20,6 +20,9 @@ db/
 # Do not push the downloaded HuggingFace models to GitHub
 local_models/
 
+# Do not push raw ingestion source files to GitHub
+raw_documents/
+
 # ==============================================================================
 # Secrets & Environment Variables
 # ==============================================================================

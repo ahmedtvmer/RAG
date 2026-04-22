@@ -7,7 +7,7 @@ from langchain_community.llms import Ollama
 
 import os
 
-base_url = os.getenv("OLLAMA_HOST", "http://localhost:11434")
+base_url = os.getenv("OLLAMA_HOST")
 
 vllm_llm = Ollama(
     model="llama3.1:8b",

@@ -2,10 +2,11 @@ import re
 import sys
 import httpx
 from langchain_community.llms import Ollama
+import os
 
-
-RAG_API_URL = "http://localhost:8080/ask"
+RAG_API_URL = os.getenv("API_URL")
 REQUEST_TIMEOUT = 120.0
+OLLAMA_HOST = os.getenv("OLLAMA_HOST")
 
 TEST_CASES: list[dict[str, str]] = [
     {
@@ -62,7 +63,7 @@ def main() -> None:
     judge = Ollama(
         model="llama3.1:8b",
         temperature=0,
-        base_url="http://localhost:11434"
+        base_url=OLLAMA_HOST
     )
 
     scores: list[int] = []
